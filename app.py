@@ -409,22 +409,22 @@ def render_case_identity_card(location: str = "main") -> None:
     case = archive.get("case") or "—"
     learning_point = archive.get("learning_point") or "—"
 
-    if location == "sidebar":
-        with st.container(border=True):
-            st.markdown("**Current case**")
-            st.caption(f"**Presenter:** {presenter}")
-            st.caption(f"**Case:** {truncate_text(case, 60)}")
-            st.caption(f"**Learning point:** {truncate_text(learning_point, 90)}")
-        return
+    #if location == "sidebar":
+        #with st.container(border=True):
+        #    st.markdown("**Current case**")
+        #    st.caption(f"**Presenter:** {presenter}")
+        #    st.caption(f"**Case:** {truncate_text(case, 60)}")
+        #    st.caption(f"**Learning point:** {truncate_text(learning_point, 90)}")
+        #return
 
-    with st.container(border=True):
-        c1, c2, c3 = st.columns([0.8, 1.2, 2.0])
-        c1.markdown("**Presenter**")
-        c1.caption(presenter)
-        c2.markdown("**Case**")
-        c2.caption(case)
-        c3.markdown("**Learning point**")
-        c3.caption(learning_point)
+    #with st.container(border=True):
+    #    c1, c2, c3 = st.columns([0.8, 1.2, 2.0])
+    #    c1.markdown("**Presenter**")
+    #    c1.caption(presenter)
+    #    c2.markdown("**Case**")
+    #    c2.caption(case)
+    #    c3.markdown("**Learning point**")
+    #    c3.caption(learning_point)
 
 
 def render_sidebar() -> None:
