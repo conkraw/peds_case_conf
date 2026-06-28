@@ -492,26 +492,26 @@ def render_advanced_panel() -> None:
             "saved_at_local": datetime.now().isoformat(timespec="seconds"),
             "deck": st.session_state.deck,
         }
-        st.download_button(
-            "Download Editable JSON Draft",
-            data=json.dumps(payload, indent=2, ensure_ascii=False).encode("utf-8"),
-            file_name=f"case_conference_{timestamp}_{case_slug}.json",
-            mime="application/json",
-            use_container_width=True,
-        )
+        #st.download_button(
+        #    "Download Editable JSON Draft",
+        #    data=json.dumps(payload, indent=2, ensure_ascii=False).encode("utf-8"),
+        #    file_name=f"case_conference_{timestamp}_{case_slug}.json",
+        #    mime="application/json",
+        #    use_container_width=True,
+        #)
 
-        uploaded = st.file_uploader("Reload From JSON Draft", type=["json"], key="advanced_uploaded_json")
-        if uploaded is not None:
-            if st.button("Load Uploaded JSON Draft", key="load_uploaded_json_button", use_container_width=True):
-                try:
-                    loaded = json.loads(uploaded.getvalue().decode("utf-8"))
-                    apply_loaded_payload_to_session(loaded)
-                    st.success("Draft loaded.")
-                    st.rerun()
-                except Exception as exc:
-                    st.error(f"Could not load JSON draft: {exc}")
+        #uploaded = st.file_uploader("Reload From JSON Draft", type=["json"], key="advanced_uploaded_json")
+        #if uploaded is not None:
+        #    if st.button("Load Uploaded JSON Draft", key="load_uploaded_json_button", use_container_width=True):
+        #        try:
+        #            loaded = json.loads(uploaded.getvalue().decode("utf-8"))
+        #            apply_loaded_payload_to_session(loaded)
+        #            st.success("Draft loaded.")
+        #            st.rerun()
+        #        except Exception as exc:
+        #            st.error(f"Could not load JSON draft: {exc}")
 
-        st.divider()
+        #st.divider()
 
         if st.button("Reset to Case Example", key="reset_case_example_button", use_container_width=True):
             st.session_state.deck = make_default_deck()
