@@ -463,11 +463,7 @@ def render_advanced_panel() -> None:
     with st.container(border=True):
         st.markdown("**Advanced drafts/reset**")
 
-        st.checkbox(
-            "Include facilitator notes appendix",
-            key="include_facilitator_notes",
-            help="Adds facilitator prompts and notes as an appendix in the PowerPoint export.",
-        )
+        #st.checkbox("Include facilitator notes appendix",key="include_facilitator_notes",help="Adds facilitator prompts and notes as an appendix in the PowerPoint export.",)
 
         st.caption(
             "Mentor review export creates an editable DOCX with the slide text and facilitator notes."
