@@ -811,7 +811,7 @@ def main() -> None:
     editor_col, export_col = st.columns([2.2, 0.9], gap="large")
 
     with editor_col:
-        st.markdown(f"## {slide_display_title(selected_slide)}")
+        #st.markdown(f"## {slide_display_title(selected_slide)}")
         st.caption("Fill out the fields below. The sidebar is only for moving between slides.")
 
         with st.container(border=True):
