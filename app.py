@@ -449,9 +449,9 @@ def render_sidebar() -> None:
         )
 
         st.divider()
-        render_case_identity_card(location="sidebar")
+        #render_case_identity_card(location="sidebar")
 
-        st.divider()
+        #st.divider()
         if st.button("Advanced Drafts/Reset", key="open_advanced_panel_button", use_container_width=True):
             st.session_state.advanced_panel = "" if st.session_state.get("advanced_panel") == "advanced" else "advanced"
 
