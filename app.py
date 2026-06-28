@@ -801,11 +801,9 @@ def main() -> None:
     render_sidebar()
 
     st.title(APP_TITLE)
-    st.caption(
-        "Choose a slide on the left, complete the fields in the main workspace, then export a standardized, progressive case conference."
-    )
+    st.caption("Choose a slide on the left, complete the fields in the main workspace, then export a standardized, progressive case conference.")
 
-    render_case_identity_card(location="main")
+    #render_case_identity_card(location="main")
 
     selected_slide = next(slide for slide in CASE_SLIDES if slide["id"] == st.session_state.selected_slide_id)
     selected_slide_data = st.session_state.deck[selected_slide["id"]]
