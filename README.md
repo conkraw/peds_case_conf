@@ -23,7 +23,7 @@ The app is designed around a progressive case-reveal format:
 ## Key features
 
 - Schema-driven slide fields in `case_schema.py`
-- Streamlit slide/section navigation
+- Streamlit slide/section navigation with the same boxed editing workflow as the Journal Club Builder
 - Word, line, and table-length limits
 - Progressive audience-prompt sections
 - PowerPoint export
@@ -31,7 +31,8 @@ The app is designed around a progressive case-reveal format:
 - Mentor review Word export
 - Printable planning worksheet export
 - Editable JSON draft download/reload
-- Optional GitHub archive storage and reload
+- Optional GitHub archive storage and reload using the right-side Archive controls
+- Persistent case identity display so presenter, case, and learning point remain visible while building
 - Archive index with the requested columns: `presenter`, `case`, and `learning_point`
 - Downloadable archive index CSV
 
