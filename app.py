@@ -812,7 +812,7 @@ def main() -> None:
 
     with editor_col:
         #st.markdown(f"## {slide_display_title(selected_slide)}")
-        st.caption("Fill out the fields below. The sidebar is only for moving between slides.")
+        #st.caption("Fill out the fields below. The sidebar is only for moving between slides.")
 
         with st.container(border=True):
             st.markdown("### Edit this slide")
